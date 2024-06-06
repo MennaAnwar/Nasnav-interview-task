@@ -6,15 +6,14 @@ import arrow360 from "../../images/360.svg";
 
 const Card = ({ product, footer }) => {
   return (
-    <div class="card align-items-center">
+    <div className="card align-items-center">
       <img
-        className="img"
         src={Object.values(product.images)[0]}
-        class="card-img-top"
+        className="card-img-top img"
         alt="..."
       />
-      <div class="card-body">
-        <h6 class="card-title">{product.title}</h6>
+      <div className="card-body">
+        <h6 className="card-title">{product.title}</h6>
         <div className="row">
           <div className="col-6">
             <Price product={product} />
