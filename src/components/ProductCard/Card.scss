@@ -2,7 +2,7 @@
   width: 268px;
   height: 440px;
 
-  img {
+  .img {
     width: 254px;
     height: 254px;
     border-radius: 10px;
@@ -12,5 +12,10 @@
   h6 {
     font-size: 14px;
     font-weight: bold;
+  }
+
+  .brand {
+    width: 56px;
+    height: 37px;
   }
 }

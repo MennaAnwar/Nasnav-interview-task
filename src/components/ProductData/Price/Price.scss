@@ -1,0 +1,18 @@
+@import "../../../App.scss";
+
+.price-discount {
+  .current-price {
+    color: #542e90;
+    font-weight: bold;
+  }
+
+  .old-price {
+    text-decoration: line-through;
+    color: #a7a9ac;
+  }
+
+  .discount {
+    background: $--primary-color;
+    color: $--secondary-color;
+  }
+}
