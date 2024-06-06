@@ -26,7 +26,9 @@ class QuantitySelector extends Component {
         <button className="circle" onClick={this.handleDecrement}>
           <span className="symbol">−</span>
         </button>
-        <span className="quantity">{quantity}</span>
+        <span id="quantity" className="quantity" value={quantity}>
+          {quantity}
+        </span>
         <button className="circle" onClick={this.handleIncrement}>
           <span className="symbol">+</span>
         </button>

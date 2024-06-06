@@ -3,10 +3,32 @@ import "./ProductData.scss";
 import QuantitySelector from "./QuantitySelector";
 import Price from "./Price/Price";
 import Rating from "./Rating/Rating";
+import { Cart } from "../../services/Cart";
 
 const ProductData = ({ product }) => {
   const sizes = ["Small", "Medium", "Large", "X Large", "XX Large"];
   const colors = Object.values(product.colors);
+
+  const AddToCart = () => {
+    const foundProduct = Cart.find((cartItem) => cartItem.id === product.id);
+    const quantity = parseInt(
+      document.getElementById("quantity").getAttribute("value"),
+      10
+    );
+    console.log(quantity);
+
+    if (foundProduct) {
+      foundProduct.quantity = quantity;
+    } else {
+      Cart.push({
+        id: product.id,
+        quantity: quantity,
+      });
+    }
+
+    console.log(Cart);
+  };
+
   return (
     <div className=" product-data">
       <img src="/images/adidas.svg" alt="adidas" />
@@ -44,7 +66,9 @@ const ProductData = ({ product }) => {
         <QuantitySelector />
       </div>
       <div className="btns mt-4 d-flex align-items-center">
-        <button className="btn addtocart me-4">Add To Cart</button>
+        <button className="btn addtocart me-4" onClick={AddToCart}>
+          Add To Cart
+        </button>
         <button className="btn pickupfromstore">Pickup From Store</button>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Navbar.scss";
+import { Cart } from "../../services/Cart";
 
 class Navbar extends Component {
   render() {
@@ -40,7 +41,7 @@ class Navbar extends Component {
           </div>
           <div className="nav-actions">
             <div className="cart">
-              <span className="cart-count">0</span>
+              <span className="cart-count">{Cart.length}</span>
               <i className="bx bx-shopping-bag me-2"></i>
               <span>Cart</span>
             </div>
