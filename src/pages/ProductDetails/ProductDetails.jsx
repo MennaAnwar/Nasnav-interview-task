@@ -3,6 +3,7 @@ import { Data } from "../../services/Data";
 import Path from "../../components/Path/Path";
 import Swiper from "../../components/ProductImages/Swiper";
 import ProductData from "../../components/ProductData/ProductData";
+import SimilarProducts from "../../components/SimilarProducts/SimilarProducts";
 
 const ProductDetails = () => {
   const product = Data[0];
@@ -27,6 +28,7 @@ const ProductDetails = () => {
           <ProductData product={product} />
         </div>
       </div>
+      <SimilarProducts />
     </>
   );
 };
