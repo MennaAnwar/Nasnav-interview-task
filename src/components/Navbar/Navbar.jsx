@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import "./Navbar.scss";
 import Cart from "../../services/Cart";
+import CartSummary from "../CartSummary/CartSummary";
 
 class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
       cartLength: Cart.getCartLength(),
+      isSidebarOpen: false,
     };
   }
 
@@ -20,6 +22,10 @@ class Navbar extends Component {
   componentWillUnmount() {
     clearInterval(this.interval);
   }
+
+  toggleSidebar = () => {
+    this.setState((prevState) => ({ isSidebarOpen: !prevState.isSidebarOpen }));
+  };
 
   render() {
     return (
@@ -58,7 +64,7 @@ class Navbar extends Component {
             <img src="/images/adidas.svg" alt="Adidas" />
           </div>
           <div className="nav-actions">
-            <div className="cart">
+            <div className="cart" onClick={this.toggleSidebar}>
               <span className="cart-count">{this.state.cartLength}</span>
               <i className="bx bx-shopping-bag me-2"></i>
               <span>Cart</span>
@@ -84,6 +90,10 @@ class Navbar extends Component {
             Offers
           </a>
         </div>
+        <CartSummary
+          isOpen={this.state.isSidebarOpen}
+          onClose={this.toggleSidebar}
+        />
       </div>
     );
   }

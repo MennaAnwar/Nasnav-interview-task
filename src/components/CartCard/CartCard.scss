@@ -1,0 +1,27 @@
+@import "../../App.scss";
+
+.cartcard {
+  width: 411px !important;
+  height: 120px !important;
+
+  .img-small {
+    width: 104px;
+    height: 104px;
+    border-radius: 10px;
+  }
+
+  .price {
+    color: #542e90;
+    font-weight: bold;
+  }
+
+  .remove {
+    background: $--primary-color;
+    color: $--secondary-color;
+    font-size: 10px;
+    font-weight: bold;
+    width: 80px;
+    height: 24px;
+    border-radius: 12px;
+  }
+}
