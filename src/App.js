@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -8,9 +9,9 @@ function App() {
       <header className="app-header">
         <Navbar />
       </header>
-      <p className="app-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
+      <div className="main-container">
+        <Footer />
+      </div>
     </div>
   );
 }

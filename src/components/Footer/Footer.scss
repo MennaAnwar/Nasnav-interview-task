@@ -1,0 +1,143 @@
+@import "../../App.scss";
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    .footer-left {
+      flex: 1;
+
+      .logo img {
+        height: 40px;
+      }
+
+      p {
+        margin: 10px 0;
+      }
+    }
+
+    .footer-right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .newsletter {
+        margin-bottom: 20px;
+
+        h3 {
+          margin-bottom: 10px;
+        }
+
+        .newsletter-input {
+          display: flex;
+          width: 450px;
+          border-radius: 40px;
+          background: #fff;
+          padding: 5px;
+
+          input {
+            padding-left: 10px;
+            width: 330px;
+            float: left;
+            border: 0;
+            background: #fff;
+            border-radius: 40px;
+            border-top-style: none;
+          }
+
+          input:focus {
+            outline: 0;
+            background: #fff;
+          }
+
+          button {
+            overflow: visible;
+            position: relative;
+            float: right;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            height: 40px;
+            width: 110px;
+            font: 13px/40px "lucida sans", "trebuchet MS", "Tahoma";
+            background: $--primary-color;
+            border-radius: 40px;
+          }
+        }
+      }
+
+      .footer-links {
+        margin-bottom: 20px;
+
+        ul {
+          list-style: none;
+          padding: 0;
+
+          li {
+            margin-bottom: 10px;
+
+            a {
+              color: white;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+
+      .social-media {
+        a {
+          display: block;
+          color: white;
+          text-decoration: none;
+          margin-bottom: 10px;
+
+          i {
+            margin-right: 5px;
+          }
+
+          img {
+            width: 33px;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #444;
+    padding: 20px 0;
+    font-size: 14px;
+
+    .payment-methods img {
+      height: 24px;
+      margin: 0 10px;
+    }
+
+    p {
+      margin: 0;
+
+      img {
+        height: 16px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
