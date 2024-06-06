@@ -2,6 +2,7 @@ import React from "react";
 import "./ProductData.scss";
 import QuantitySelector from "./QuantitySelector";
 import Price from "./Price/Price";
+import Rating from "./Rating/Rating";
 
 const ProductData = ({ product }) => {
   const sizes = ["Small", "Medium", "Large", "X Large", "XX Large"];
@@ -11,6 +12,7 @@ const ProductData = ({ product }) => {
       <img src="/images/adidas.svg" alt="adidas" />
       <h5>{product.title}</h5>
       <h6 className="gender">{product.gender}</h6>
+      <Rating product={product} />
       <Price product={product} />
       <hr className="hr" />
       <div className="size">
