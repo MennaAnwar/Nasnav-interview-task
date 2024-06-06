@@ -1,7 +1,7 @@
-import tshirt1 from "../images/tshirt1-1.png";
-import tshirt2 from "../images/tshirt1-2.png";
-import tshirt3 from "../images/tshirt1-3.png";
-import tshirt4 from "../images/tshirt1-4.png";
+import tshirt1 from "../images/tshirt1.png";
+import tshirt2 from "../images/tshirt1-1.png";
+import tshirt3 from "../images/tshirt1-2.png";
+import tshirt4 from "../images/tshirt1-3.png";
 import color1 from "../images/color-1.png";
 import color2 from "../images/color-2.png";
 
