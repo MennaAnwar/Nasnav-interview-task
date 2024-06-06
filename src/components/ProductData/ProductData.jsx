@@ -3,14 +3,15 @@ import "./ProductData.scss";
 import QuantitySelector from "./QuantitySelector";
 import Price from "./Price/Price";
 import Rating from "./Rating/Rating";
-import { Cart } from "../../services/Cart";
+import Cart from "../../services/Cart";
 
 const ProductData = ({ product }) => {
   const sizes = ["Small", "Medium", "Large", "X Large", "XX Large"];
   const colors = Object.values(product.colors);
+  const cart = Cart.items;
 
   const AddToCart = () => {
-    const foundProduct = Cart.find((cartItem) => cartItem.id === product.id);
+    const foundProduct = cart.find((cartItem) => cartItem.id === product.id);
     const quantity = parseInt(
       document.getElementById("quantity").getAttribute("value"),
       10
@@ -20,13 +21,13 @@ const ProductData = ({ product }) => {
     if (foundProduct) {
       foundProduct.quantity = quantity;
     } else {
-      Cart.push({
+      cart.push({
         id: product.id,
         quantity: quantity,
       });
     }
 
-    console.log(Cart);
+    console.log(cart);
   };
 
   return (

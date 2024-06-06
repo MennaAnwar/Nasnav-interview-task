@@ -1,8 +1,26 @@
 import React, { Component } from "react";
 import "./Navbar.scss";
-import { Cart } from "../../services/Cart";
+import Cart from "../../services/Cart";
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cartLength: Cart.getCartLength(),
+    };
+  }
+
+  componentDidMount() {
+    // Optionally set an interval to periodically update the cart length
+    this.interval = setInterval(() => {
+      this.setState({ cartLength: Cart.getCartLength() });
+    }, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   render() {
     return (
       <div className="navbar-container">
@@ -41,7 +59,7 @@ class Navbar extends Component {
           </div>
           <div className="nav-actions">
             <div className="cart">
-              <span className="cart-count">{Cart.length}</span>
+              <span className="cart-count">{this.state.cartLength}</span>
               <i className="bx bx-shopping-bag me-2"></i>
               <span>Cart</span>
             </div>
