@@ -17,22 +17,22 @@ class Navbar extends Component {
           </div>
           <div className="actions">
             <a href="#">
-              <i class="bx bx-phone-call"></i>
+              <i className="bx bx-phone-call"></i>
               <span>Contact Us</span>
             </a>
             <a href="#">
-              <i class="bx bx-cart"></i>
+              <i className="bx bx-cart"></i>
               <span>Track Order</span>
             </a>
             <a href="#">
-              <i class="bx bx-current-location"></i>
+              <i className="bx bx-current-location"></i>
               <span>Find A Store</span>
             </a>
           </div>
         </div>
         <div className="main-nav">
-          <div class="form-group has-search">
-            <i class="bx bx-search form-control-feedback"></i>
+          <div className="form-group has-search">
+            <i className="bx bx-search form-control-feedback"></i>
             <input type="text" class="form-control" placeholder="Search" />
           </div>
           <div className="brand-logo">
@@ -41,15 +41,15 @@ class Navbar extends Component {
           <div className="nav-actions">
             <div className="cart">
               <span className="cart-count">0</span>
-              <i class="bx bx-shopping-bag me-2"></i>
+              <i className="bx bx-shopping-bag me-2"></i>
               <span>Cart</span>
             </div>
             <div className="wishlist">
-              <i class="bx bx-heart"></i>
+              <i classclassName="bx bx-heart"></i>
               <span>Wishlist</span>
             </div>
             <div className="login">
-              <i class="bx bx-user"></i>
+              <i classclassName="bx bx-user"></i>
               <span>Login</span>
             </div>
           </div>

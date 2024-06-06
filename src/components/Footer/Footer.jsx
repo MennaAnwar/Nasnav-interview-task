@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <footer className="footer">
         <div className="footer-content row">
-          <div class="col-lg-5 col-md-12">
+          <div className="col-lg-5 col-md-12">
             <div className="footer-left px-5">
               <div className="logo">
                 <img src="/images/logo-light.svg" alt="Yeshtary" />
@@ -30,11 +30,11 @@ class Footer extends Component {
               </p>
             </div>
           </div>
-          <div class="d-none col-lg-1 d-lg-flex">
-            <div class="vr"></div>
+          <div className="d-none col-lg-1 d-lg-flex">
+            <div className="vr"></div>
           </div>
 
-          <div class="col-lg-6 col-md-12">
+          <div className="col-lg-6 col-md-12">
             <div className="footer-right px-5">
               <div className="newsletter">
                 <h3>Subscribe to our newsletter</h3>
