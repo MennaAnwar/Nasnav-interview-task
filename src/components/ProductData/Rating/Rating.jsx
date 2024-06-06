@@ -3,7 +3,7 @@ import "./Rating.scss";
 
 const Rating = ({ product }) => {
   return (
-    <div className="d-flex rating">
+    <div className="d-flex rating my-1">
       <div className="stars">
         <i class="bx bxs-star"></i>
         <i class="bx bxs-star"></i>

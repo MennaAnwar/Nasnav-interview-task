@@ -2,8 +2,9 @@ import React from "react";
 import "./Card.scss";
 import Price from "../ProductData/Price/Price";
 import Rating from "../ProductData/Rating/Rating";
+import arrow360 from "../../images/360.svg";
 
-const Card = ({ product }) => {
+const Card = ({ product, footer }) => {
   return (
     <div class="card align-items-center">
       <img
@@ -20,13 +21,14 @@ const Card = ({ product }) => {
           </div>
           <div className="col-6 d-flex justify-content-center">
             <img className="brand" src="/images/adidas.svg" />
+            <img src={arrow360} alt="360" className="arrow-360" />
           </div>
         </div>
         <div className="justify-content-center">
           <Rating product={product} />
         </div>
 
-        {/* footer of card */}
+        <div>{footer}</div>
       </div>
     </div>
   );
