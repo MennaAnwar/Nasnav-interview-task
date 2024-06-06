@@ -1,11 +1,16 @@
 import React from "react";
 import "./App.scss";
-import Product from "./pages/ProductDetails/Product";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div className="app">
-      <Product />
+      <header className="app-header">
+        <Navbar />
+      </header>
+      <p className="app-intro">
+        To get started, edit <code>src/App.js</code> and save to reload.
+      </p>
     </div>
   );
 }
