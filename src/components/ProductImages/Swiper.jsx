@@ -7,7 +7,7 @@ class Swiper extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeImage: props.imgs[0], // Set the first image as the initial active image
+      activeImage: props.imgs[0],
     };
   }
 
@@ -19,14 +19,17 @@ class Swiper extends Component {
     const { imgs } = this.props;
     const { activeImage } = this.state;
 
+    // Filter out the active image from the carousel images
+    const carouselImages = imgs.filter((img) => img !== activeImage);
+
     return (
       <>
-        <div className="d-flex justify-content-center active my-3">
+        <div className="d-flex justify-content-center active">
           <img src={activeImage} alt="active-img" />
           <img src={arrow360} alt="360" className="arrow-360" />
         </div>
-        <Carousel itemCountPerPanel={4}>
-          {imgs.map((el, idx) => (
+        {/* <Carousel itemCountPerPanel={4}>
+          {carouselImages.map((el, idx) => (
             <img
               className="product-img"
               src={el}
@@ -35,7 +38,7 @@ class Swiper extends Component {
               onClick={() => this.handleImageClick(el)}
             />
           ))}
-        </Carousel>
+        </Carousel> */}
       </>
     );
   }
