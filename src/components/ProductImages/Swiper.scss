@@ -1,0 +1,26 @@
+.active {
+  width: 568px;
+  height: 568px;
+
+  img {
+    border-radius: 15px;
+  }
+
+  .arrow-360 {
+    position: relative;
+    top: 10px;
+    right: 445px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.laxBps {
+  flex-direction: row !important;
+  .product-img {
+    width: 120px;
+    height: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

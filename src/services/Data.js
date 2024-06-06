@@ -1,3 +1,4 @@
+import active1 from "../images/active1.png";
 import tshirt1 from "../images/tshirt1.png";
 import tshirt2 from "../images/tshirt1-1.png";
 import tshirt3 from "../images/tshirt1-2.png";
@@ -21,7 +22,7 @@ export const Data = [
     currency: "LE",
     discount: "100%",
     size: "Large",
-    images: { tshirt1, tshirt2, tshirt3, tshirt4 },
+    images: { active1, tshirt1, tshirt2, tshirt3, tshirt4 },
     colors: { color1, color2 },
   },
 ];

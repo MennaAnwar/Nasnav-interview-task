@@ -33,7 +33,7 @@ class Navbar extends Component {
         <div className="main-nav">
           <div className="form-group has-search">
             <i className="bx bx-search form-control-feedback"></i>
-            <input type="text" class="form-control" placeholder="Search" />
+            <input type="text" className="form-control" placeholder="Search" />
           </div>
           <div className="brand-logo">
             <img src="/images/adidas.svg" alt="Adidas" />
@@ -45,11 +45,11 @@ class Navbar extends Component {
               <span>Cart</span>
             </div>
             <div className="wishlist">
-              <i classclassName="bx bx-heart"></i>
+              <i className="bx bx-heart"></i>
               <span>Wishlist</span>
             </div>
             <div className="login">
-              <i classclassName="bx bx-user"></i>
+              <i className="bx bx-user"></i>
               <span>Login</span>
             </div>
           </div>
