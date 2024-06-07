@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import Carousel from "@jjunyjjuny/react-carousel";
 import arrow360 from "../../images/360.svg";
 import "./Swiper.scss";
 
-class Swiper extends Component {
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+
+class ImgSwiper extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,20 +32,29 @@ class Swiper extends Component {
           <img src={activeImage} alt="active-img" />
           <img src={arrow360} alt="360" className="arrow-360" />
         </div>
-        {/* <Carousel itemCountPerPanel={4}>
+
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={0}
+          navigation={true}
+          modules={[Navigation]}
+          className="mySwiper mt-3"
+        >
           {carouselImages.map((el, idx) => (
-            <img
-              className="product-img"
-              src={el}
-              alt={`img-${idx}`}
-              key={idx}
-              onClick={() => this.handleImageClick(el)}
-            />
+            <SwiperSlide>
+              <img
+                className="product-img"
+                src={el}
+                alt={`img-${idx}`}
+                key={idx}
+                onClick={() => this.handleImageClick(el)}
+              />
+            </SwiperSlide>
           ))}
-        </Carousel> */}
+        </Swiper>
       </>
     );
   }
 }
 
-export default Swiper;
+export default ImgSwiper;
