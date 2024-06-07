@@ -20,7 +20,10 @@ function App() {
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path="/product/:id" element={<ProductDetails />} />
-              <Route path="/" element={<Navigate to="/product/1" />} />
+              <Route
+                path="/Nasnav-interview-task"
+                element={<Navigate to="/product/1" />}
+              />
             </Routes>
           </Suspense>
           <Footer />
